@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Platform for Visually Impaired</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header role="banner" class="gradient-background">
+        <h1 class="animated-title">Web Design Platform</h1>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="/" id="home-link" class="nav-item"><span class="icon">🏠</span>Home</a></li>
+                <li><a href="/design" id="design-link" class="nav-item"><span class="icon">🎨</span>Design</a></li>
+                <li><a href="/logo-maker" id="logo-maker-link" class="nav-item"><span class="icon">🖼️</span>Logo-Maker</a></li>
+                <li><a href="/image-gen" id="image-gen-link" class="nav-item"><span class="icon">🖌️</span>Image-Gen</a></li>
+                <li><a href="/portfolio" id="portfolio-link" class="nav-item"><span class="icon">📁</span>Portfolio</a></li>
+                <li><a href="/resume-builder" id="resume-builder-link" class="nav-item"><span class="icon">📄</span>Resume Builder</a></li>
+                <li><a href="/presentation" id="presentation-link" class="nav-item"><span class="icon">📊</span>Presentation</a></li>
+                <li><a href="/social-media" id="social-media-link" class="nav-item"><span class="icon">📱</span>Social Media</a></li>
+                <li><a href="/video" id="video-link" class="nav-item"><span class="icon">🎥</span>Video</a></li>
+                <li><a href="/settings" id="settings-link" class="nav-item"><span class="icon">⚙️</span>Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
+        {% block content %}{% endblock %}
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2024 Web Design Platform for Visually Impaired</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
+</body>
+</html>

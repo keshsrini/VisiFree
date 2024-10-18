@@ -1,1 +1,48 @@
-
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="welcome-title animated-title bounce-animation">Welcome to the Web Design Platform for Visually Impaired</h2>
+<div class="decorative-circle"></div>
+<div class="decorative-circle"></div>
+<div class="decorative-circle"></div>
+<div class="decorative-circle"></div>
+<div class="decorative-circle"></div>
+<div class="decorative-circle"></div>
+<div class="intro-text">
+    <p>Unleash your creativity with our accessible tools and features. Here's what you can do:</p>
+</div>
+<div class="feature-list grid-layout colorful-section">
+    <div class="feature-item float-animation">
+        <h3>Design Your Website</h3>
+        <p>Create stunning websites with our accessible component builder.</p>
+        <a href="{{ url_for('design') }}" class="cta-button glow-on-hover">Start Designing</a>
+    </div>
+    <div class="feature-item float-animation">
+        <h3>Customize Your Experience</h3>
+        <p>Tailor the platform to your needs with personalized accessibility settings.</p>
+        <a href="{{ url_for('settings') }}" class="cta-button glow-on-hover">Adjust Settings</a>
+    </div>
+</div>
+<div class="how-to-use colorful-section">
+    <h3 class="section-title">How to Use This Platform</h3>
+    <ol class="steps-list">
+        <li>Visit the <a href="{{ url_for('settings') }}">Settings page</a> to customize your experience. Adjust font size, voice speed, color scheme, and audio cues.</li>
+        <li>Head to the <a href="{{ url_for('design') }}">Design page</a> to start creating your website.</li>
+        <li>Use component buttons to add elements to your canvas, with voice guidance and audio cues.</li>
+        <li>Navigate between components using keyboard shortcuts:
+            <ul>
+                <li>Press Enter to edit a component</li>
+                <li>Use Delete to remove a component</li>
+                <li>Reorder components with arrow keys</li>
+            </ul>
+        </li>
+        <li>Save your work with the Save Design button and retrieve it later using Load Design.</li>
+    </ol>
+</div>
+<div class="accessibility-note">
+    <p>Every action on this platform is designed with accessibility in mind. If you need assistance, use your screen reader's shortcut keys to navigate and explore the page contents.</p>
+</div>
+<div class="get-started">
+    <p>Ready to bring your ideas to life?</p>
+    <a href="{{ url_for('design') }}" class="cta-button pulse-animation">Start Creating Now</a>
+</div>
+{% endblock %}

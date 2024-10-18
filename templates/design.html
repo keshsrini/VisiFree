@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="page-title animated-title">Web Design Studio</h2>
+<div id="design-area" class="colorful-section">
+<div class="decorative-circle"></div>
+<div class="decorative-circle"></div>
+    <div id="component-palette">
+        <h3 class="section-title">Components</h3>
+        <ul class="component-list">
+            <li><button class="component" data-type="header" aria-label="Add header">Header</button></li>
+            <li><button class="component" data-type="paragraph" aria-label="Add paragraph">Paragraph</button></li>
+            <li><button class="component" data-type="image" aria-label="Add image">Image</button></li>
+            <li><button class="component" data-type="button" aria-label="Add button">Button</button></li>
+            <li><button class="component" data-type="list" aria-label="Add list">List</button></li>
+            <li><button class="component" data-type="table" aria-label="Add table">Table</button></li>
+        </ul>
+    </div>
+    <div id="canvas">
+        <h3 class="section-title">Canvas</h3>
+        <div id="drop-zone" aria-live="polite" class="canvas-area">
+            <!-- Components will be added here -->
+        </div>
+    </div>
+</div>
+<div class="design-controls">
+    <button id="save-design" class="action-button">Save Design</button>
+    <button id="load-design" class="action-button">Load Design</button>
+    <div class="background-image-control">
+        <label for="background-image-url">Background Image URL:</label>
+        <input type="text" id="background-image-url" placeholder="Paste image URL here">
+        <button id="set-background-image" class="action-button">Set Background Image</button>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/design.js') }}"></script>
+{% endblock %}
