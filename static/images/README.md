@@ -1,0 +1,1 @@
+Place your background image file named 'background.jpg' in this directory for it to be used as the site-wide background.
